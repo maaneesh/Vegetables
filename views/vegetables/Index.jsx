@@ -1,18 +1,28 @@
 import React from 'react'
 
-function Index({vegetables}) {
+function Index({ vegetables }) {
     return (
         <div>{
             vegetables.map((vegetable, i) => {
                 return (
-                    <li key={i}><a href={`/vegetables/${i}`}>{vegetable.name}</a> is {vegetable.color} <br/>
+                    <h2>  <li key={i}><a href={`/vegetables/${i}`}>{vegetable.name}</a> is {vegetable.color} <br />
                         {
                             vegetable.readyToEat ? "It is ready to eat" : "It is not ready to eat"
                         }
-                    </li>
+                    </li></h2>
+
                 )
             })
-        }</div>
+        }
+            <nav>
+                <h3>
+                <a href="/vegetables/new">Create a New Vegetable</a>
+                </h3>
+               
+            </nav>
+
+
+        </div>
     )
 }
 

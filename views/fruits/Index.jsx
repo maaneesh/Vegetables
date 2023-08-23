@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 function Index({ fruits }) {
     return (
         <div>{
@@ -8,7 +9,7 @@ function Index({ fruits }) {
                     <div>
 
                         <h1>
-                            <li key={i}><a href={`/fruits/${i}`}>{fruit.name}</a> is {fruit.color} </li>
+                            <li key={i}><a href={`/fruits/${fruit.id}`}>{fruit.name}</a> is {fruit.color} </li>
                         </h1>
 
                         <h2>
@@ -20,7 +21,16 @@ function Index({ fruits }) {
                     </div>
                 )
             })
-        }</div>
+        }
+            <nav>
+                <h3>
+                <a href="/fruits/new">Create a New Fruit</a>
+                </h3>
+                
+            </nav>
+
+
+        </div>
     )
 }
 
